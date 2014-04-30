@@ -1,6 +1,8 @@
 Grails Dirserve plugin
 ======================
 
+[![Build Status](https://travis-ci.org/enr/grails-dirserve.png?branch=master)](https://travis-ci.org/enr/grails-dirserve)
+
 Serve static contents from a filesystem directory.
 
 
@@ -9,6 +11,7 @@ Usage
 
 For every directory you want to serve, add configuration to UrlMappings file:
 
+```groovy
     "/spa/$asset**" {
         controller = 'dirserve'
         action = 'index'
@@ -16,6 +19,7 @@ For every directory you want to serve, add configuration to UrlMappings file:
                           Environment.current == Environment.TEST) ? 
                           '/path/dev' : '/path/prod')
     }
+```
 
 
 Sample app
