@@ -1,0 +1,1 @@
+"use strict";angular.module("mafuApp",["ngRoute"]).config(["$routeProvider",function(a){a.when("/",{templateUrl:"modules/main/home.html",controller:"HomeCtrl"}).otherwise({redirectTo:"/"})}]),angular.module("mafuApp").controller("HomeCtrl",["$scope",function(a){a.awesomeThings=["HTML5 Boilerplate","AngularJS","Karma"]}]);
