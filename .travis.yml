@@ -1,13 +1,20 @@
+
 language: java
 
 jdk:
     - oraclejdk7
-    - openjdk7
+
+branches:
+  only:
+    - master
 
 before_script:
-    - chmod +x grailsw
-    - ./grailsw clean
-    - ./grailsw refresh-dependencies
-    - ./grailsw compile
+    - chmod +x travis-build.sh
 
-script: ./grailsw test-app
+script: ./travis-build.sh
+
+env:
+  global:
+  - secure: "Po+DBndhQMDx1NwaXt7i+JvM2UtTKo59+RNM7E70nKNDXhJdDhMBMdbJYlce+Q4S/rAVO55HbC335q1VpCbTRS1Ly3x/F1Br9B1zIVq1uKtc2J0zLCKlO8J5WUeIyVkoA1uOnqrkD9xs19cVx7XJR4kHS0ivBaFeYc/tmwLIXiA="
+  - secure: "K2szTx1cgFwZRA3hCOrM5O0tVhTi3rHlCgo0eCetgd0bUZviaCqymtSWG/DoVbbCjbbjE+dm5Q6CX2peIePrvQOcyyPOqZuQP4UP7LQ8WWWNv0omjYIXb1YSXzIBWD4l1ZcFzZQFI1x0BllC+KRsfX9DEt/JP4DdpLx3tGJY+x4="
+
