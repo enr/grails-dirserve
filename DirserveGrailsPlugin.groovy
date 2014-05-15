@@ -1,6 +1,6 @@
 class DirserveGrailsPlugin {
 
-    def version = "0.3.20140429"
+    def version = "0.5.0-SNAPSHOT"
 
     def grailsVersion = "2.3 > *"
 
